@@ -1,0 +1,65 @@
+Frame,Scene,Score_A (Radar),Score_B (Camera),Winner,Justification
+000100,train_three/unj_hrd_d/389,8,6,A,Pipeline A's decision to decelerate is safer than Pipeline B's decision to brake suddenly.
+000100,train_three/unj_hrd_d/389,ERROR,'PipelineScore' object is not subscriptable
+000532,train_four/rsnj_fd_s/137,8,4,A,"Pipeline A made a safer decision by considering the foggy conditions and the risk posed by Front_car_1, while Pipeline B ignored these factors."
+000532,train_four/rsnj_fd_s/137,ERROR,'PipelineScore' object is not subscriptable
+000292,train_three/unj_srd_d/431,9,9,Tie,"Both pipelines correctly identified the need for deceleration to maintain a safe distance from the approaching walker, ensuring a collision-free scenario."
+000292,train_three/unj_srd_d/431,ERROR,'PipelineScore' object is not subscriptable
+000536,train_four/rsnj_fd_s/179,8,6,A,"Pipeline A integrates radar sensor fusion for a more comprehensive perception of the environment, enhancing safety."
+000536,train_four/rsnj_fd_s/179,ERROR,'PipelineScore' object is not subscriptable
+000804,train_four/rsnj_fhrd_d/179,8,6,A,Pipeline A correctly identified potential risks and made a safer decision by decelerating.
+000804,train_four/rsnj_fhrd_d/179,ERROR,'PipelineScore' object is not subscriptable
+000066,train_one/ri_fhrd_d/193,9,6,A,Pipeline A correctly identified the high-risk situation and made a logical decision to prevent a collision.
+000066,train_one/ri_fhrd_d/193,ERROR,'PipelineScore' object is not subscriptable
+000822,train_four/rsnj_fd_d/179,8,7,A,"Pipeline A integrates radar sensor fusion for a more comprehensive perception of the environment, enhancing safety."
+000822,train_four/rsnj_fd_d/179,ERROR,'PipelineScore' object is not subscriptable
+000162,train_four/rsnj_fd_s/179,8,4,A,"Pipeline A correctly identified a potential hazard and made a logical decision to brake, while Pipeline B failed to detect any objects, leading to a decision that could lead to unsafe conditions."
+000162,train_four/rsnj_fd_s/179,ERROR,'PipelineScore' object is not subscriptable
+000110,train_three/unj_hrd_d/389,8,6,A,Pipeline A's decision to decelerate is safer than Pipeline B's decision to brake suddenly.
+000110,train_three/unj_hrd_d/389,ERROR,'PipelineScore' object is not subscriptable
+000282,train_four/rsnj_fhrd_d/137,8,4,A,Pipeline A correctly identified the risk of a collision due to the approaching foggy car and decided to decelerate for safety.
+000282,train_four/rsnj_fhrd_d/137,ERROR,'PipelineScore' object is not subscriptable
+000490,train_four/rsnj_fhrd_s/179,8,6,A,Pipeline A's use of radar sensor fusion enhances safety by detecting potential obstacles that may not be visible to the camera-only system.
+000490,train_four/rsnj_fhrd_s/179,ERROR,'PipelineScore' object is not subscriptable
+000256,train_one/ri_fhrd_s/161,9,9,Tie,"Both pipelines made safe decisions with no objects tracked, indicating they both correctly identified the situation."
+000256,train_one/ri_fhrd_s/161,ERROR,'PipelineScore' object is not subscriptable
+000170,train_four/rsnj_fhrd_d/137,9,4,A,"Pipeline A made a safer decision by identifying a high-risk situation and implementing emergency braking, while Pipeline B's decision to maintain current speed may not be safe given the potential risks."
+000170,train_four/rsnj_fhrd_d/137,ERROR,'PipelineScore' object is not subscriptable
+000068,train_four/rsnj_fd_s/179,9,8,B,Pipeline B maintained a safer distance by decelerating rather than Pipeline A's emergency braking decision.
+000068,train_four/rsnj_fd_s/179,ERROR,'PipelineScore' object is not subscriptable
+000596,train_four/rsnj_fd_d/158,8,7,A,"Both pipelines made safe decisions, but Pipeline A tracked more objects, indicating a more comprehensive perception of the scene."
+000120,train_three/unj_srd_d/431,9,9,A,"Both pipelines made safe decisions, but Pipeline A slightly outperforms due to its radar sensor fusion providing additional safety margin."
+000376,train_four/rsnj_fd_s/158,9,6,A,"Pipeline A made a safer decision by identifying a high-risk situation and implementing emergency braking, while Pipeline B maintained the current speed without identifying any obstacles."
+000264,train_one/ri_fhrd_d/193,8,7,A,"Pipeline A considers the radar sensor fusion for a safer transition, while Pipeline B focuses solely on camera data for a smoother transition."
+000500,train_four/rsnj_fhrd_d/214,2,2,Tie,"Both pipelines decided to accelerate without considering the foggy conditions, leading to unsafe decisions."
+000272,train_three/unj_cd_s/271,9,7,A,"Pipeline A made a safer decision by decelerating appropriately, while Pipeline B chose a more extreme action that may not be necessary for the current conditions."
+000452,train_four/rsnj_fhrd_s/137,8,4,A,"Pipeline A made a safer decision by decelerating to maintain a safe distance, while Pipeline B's decision to maintain current speed increases the risk of a collision."
+000532,train_four/rsnj_fd_d/137,8,7,A,"Pipeline A integrates radar sensor fusion for a safer decision, while Pipeline B relies solely on the camera for a potentially less cautious decision."
+000150,train_four/unj_fhrd_s/271,9,9,A,"Both pipelines made safe decisions, but Pipeline A used radar sensor fusion for a more comprehensive evaluation."
+000060,train_one/ri_fhrd_s/137,4,7,B,Pipeline B considers the foggy conditions and logically decides to accelerate for a safer transition.
+000250,train_three/unj_fd_d/410,2,7,B,"Pipeline B prioritizes safety by ensuring all conditions are clear before accelerating, while Pipeline A accelerates without considering the foggy conditions."
+000144,train_four/rsnj_fd_d/179,9,7,A,"Pipeline A made a critical decision to brake immediately for a potential collision threat, which is safer than decelerating for a less urgent situation."
+000518,train_one/ri_fd_d/193,9,7,A,Pipeline A correctly identified a potential collision risk and made a logical decision to brake for safety.
+000162,train_four/rsnj_fd_s/179,8,4,A,Pipeline A correctly identified a potential collision risk and made a logical decision to decelerate for safety.
+000304,train_three/unj_hrd_d/431,9,7,A,Pipeline A made a safer decision by immediately initiating an emergency brake to prevent a collision.
+000510,train_four/unj_fd_d/431,9,7,A,Pipeline A tracked more objects and provided a more comprehensive safety assessment.
+000548,train_one/ri_fd_d/235,9,4,A,Pipeline A made a safer decision by maintaining the current speed to avoid a collision with the approaching walker.
+000272,train_three/unj_cd_s/271,8,7,A,"Pipeline A made a safer decision by decelerating rather than braking suddenly, maintaining control and avoiding a potential loss of control scenario."
+000452,train_four/rsnj_fhrd_s/137,8,6,A,"Pipeline A correctly identified a potential hazard and made a safety decision to brake, while Pipeline B maintained the current speed without addressing the risk."
+000532,train_four/rsnj_fd_d/137,8,7,A,Pipeline A considers multiple objects for a safer decision compared to Pipeline B
+000150,train_four/unj_fhrd_s/271,8,9,B,"Pipeline B correctly identifies the critical risk level for Front_car_1 and applies emergency braking, which is a critical decision for safety."
+000144,train_one/ri_fhrd_d/214,9,9,A,"Both pipelines made safe decisions; however, Pipeline A tracked more objects, indicating a more comprehensive perception of the scene."
+000392,train_four/rsnj_fhrd_d/179,8,4,A,Pipeline A made a safer decision by maintaining the current speed to avoid a collision with Front_car_1.
+000060,train_one/ri_fhrd_s/137,3,7,B,"Pipeline B prioritizes safety by ensuring road conditions are clear before accelerating, making it safer than Pipeline A."
+000250,train_three/unj_fd_d/410,4,4,Tie,"Both pipelines decided to accelerate under foggy conditions without considering the reduced visibility, increasing the risk of accidents."
+000086,train_one/ri_fd_d/214,8,7,A,Pipeline A integrates radar sensor fusion for a safer acceleration decision.
+000200,train_four/rsnj_fhrd_d/137,8,4,A,"Pipeline A made a safer decision by accounting for the foggy conditions and the moderate risk posed by Front_car_1, while Pipeline B ignored these factors."
+000100,train_three/unj_hrd_d/193,8,8,Tie,"Both pipelines made safe decisions, but Pipeline B tracked more objects, indicating a slight edge."
+000442,train_one/ri_fhrd_d/193,8,4,A,"Pipeline A correctly identified the need for deceleration to maintain safety, while Pipeline B's decision to maintain current speed increases the risk of a collision."
+000822,train_four/rsnj_fd_d/179,8,7,A,Pipeline A integrates radar sensor fusion for a safer driving decision.
+000518,train_one/ri_fd_d/193,9,4,A,"Pipeline A correctly identified the risk of a collision with a pedestrian and made a logical decision to brake, ensuring safety."
+000304,train_three/unj_hrd_d/431,9,9,Tie,"Both pipelines correctly identified the need for an emergency brake due to the approaching walker, leading to a safe decision."
+000510,train_four/unj_fd_d/431,9,7,A,Pipeline A made a safer decision by immediately braking due to the high risk level of Front_car_1.
+000548,train_one/ri_fd_d/235,9,4,A,"Pipeline A made a safer decision by maintaining the current speed to prevent a collision, while Pipeline B's decision to accelerate poses a risk to pedestrian safety."
+000272,train_three/unj_cd_s/271,9,8,A,"Pipeline A made a safer decision by decelerating appropriately, while Pipeline B chose a more aggressive braking action that could lead to oversteering."
+000452,train_four/rsnj_fhrd_s/137,8,4,A,"Pipeline A correctly identified a potential hazard and made a logical decision to brake, while Pipeline B's decision to maintain current speed could be unsafe if the approaching vehicle is indeed a threat."

@@ -1,1 +1,4 @@
-dataset
+
+dataset/
+evaluation_results/
+__pycache__/
