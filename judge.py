@@ -33,8 +33,10 @@ def load_mistral():
 
 def query_mistral(model, tokenizer, prompt: str, max_tokens: int = 400) -> str:
     from mlx_lm import generate
+    from mlx_lm.sample_utils import make_sampler
     chat = f"[INST] {prompt} [/INST]"
-    result = generate(model, tokenizer, prompt=chat, max_tokens=max_tokens, temp=0.1, verbose=False)
+    sampler = make_sampler(temp=0.1)
+    result = generate(model, tokenizer, prompt=chat, max_tokens=max_tokens, sampler=sampler, verbose=False)
     return result.strip()
 
 
@@ -116,16 +118,36 @@ def main():
     model, tokenizer = load_mistral()
 
     # Open CSV files
-    with open(MODALITY_CSV, "w", newline="") as f1, open(REPRESENTATION_CSV, "w", newline="") as f2:
-        writer_mod = csv.writer(f1)
-        writer_mod.writerow(["Frame", "Scene", "Score_A (Radar)", "Score_B (Camera)", "Winner", "Justification"])
+    existing_frames = set()
+    mode = "w"
+    if MODALITY_CSV.exists() and REPRESENTATION_CSV.exists():
+        try:
+            with open(MODALITY_CSV, "r") as f:
+                reader = csv.reader(f)
+                next(reader, None)
+                for row in reader:
+                    if row and row[0] != "ERROR":
+                        existing_frames.add(row[0])
+            mode = "a"
+            print(f"[Phase 2] Found {len(existing_frames)} existing evaluated frames. Resuming...")
+        except Exception:
+            mode = "w"
 
+    with open(MODALITY_CSV, mode, newline="") as f1, open(REPRESENTATION_CSV, mode, newline="") as f2:
+        writer_mod = csv.writer(f1)
         writer_rep = csv.writer(f2)
-        writer_rep.writerow(["Frame", "Scene", "Score_JSON_Format", "Score_Text_Format", "Winner", "Justification"])
+        
+        if mode == "w":
+            writer_mod.writerow(["Frame", "Scene", "Score_A (Radar)", "Score_B (Camera)", "Winner", "Justification"])
+            writer_rep.writerow(["Frame", "Scene", "Score_JSON_Format", "Score_Text_Format", "Winner", "Justification"])
 
         for i, frame in enumerate(frames):
             frame_id = frame["frame_id"]
             scene = frame["scene"]
+            
+            if frame_id in existing_frames:
+                print(f"[{i+1}/{len(frames)}] Skipping (already evaluated): Frame {frame_id}")
+                continue
             print(f"\n[{i+1}/{len(frames)}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
             print(f"[{i+1}/{len(frames)}] JUDGING: Frame {frame_id} | Scene: {scene}")
             print(f"[{i+1}/{len(frames)}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
